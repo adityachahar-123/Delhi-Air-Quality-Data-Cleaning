@@ -3,7 +3,7 @@ import numpy as np
 import json
 from pathlib import Path
 
-INPUT_FILE = Path("data/raw_air_quality.csv")
+INPUT_FILE = Path("data/air_quality_historical.csv")
 OUTPUT_DIR = Path("outputs")
 OUTPUT_DIR.mkdir(exist_ok=True)
 
