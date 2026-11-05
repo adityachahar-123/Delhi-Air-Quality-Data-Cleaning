@@ -1,0 +1,31 @@
+
+name: Delhi Air Quality Data Cleaning
+
+on:
+  workflow_dispatch:
+
+jobs:
+  clean-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run data cleaning
+        run: python clean_data.py
+
+      - name: Upload cleaned results
+        uses: actions/upload-artifact@v4
+        with:
+          name: Delhi-Air-Quality-Cleaned-Results
+          path: outputs/
+          
