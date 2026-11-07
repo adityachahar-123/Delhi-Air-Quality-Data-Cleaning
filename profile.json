@@ -1,0 +1,36 @@
+{
+    "before_cleaning": {
+        "rows": 1298,
+        "columns": 12,
+        "missing_values": 35,
+        "duplicate_rows": 0
+    },
+    "after_cleaning": {
+        "rows": 1298,
+        "columns": 23,
+        "missing_values": 0,
+        "duplicate_rows": 0
+    },
+    "outliers_detected": {
+        "pm10": 92,
+        "pm2_5": 33,
+        "carbon_monoxide": 49,
+        "nitrogen_dioxide": 45,
+        "sulphur_dioxide": 75,
+        "ozone": 35,
+        "aerosol_optical_depth": 24,
+        "dust": 180,
+        "uv_index": 0,
+        "us_aqi": 65,
+        "european_aqi": 53
+    },
+    "cleaning_methods": [
+        "Column name standardization",
+        "Date conversion",
+        "Duplicate removal",
+        "Invalid negative value handling",
+        "Median imputation",
+        "IQR outlier detection",
+        "Min-Max normalization"
+    ]
+}
